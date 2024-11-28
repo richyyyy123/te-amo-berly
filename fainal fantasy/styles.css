@@ -1,0 +1,277 @@
+/* Resetear margenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilo de la barra de navegación */
+nav {
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Estilo de la sección de bienvenida */
+header {
+    background-image: url('https://i.pinimg.com/736x/f0/c4/3b/f0c43be41aca940e2e932bf37ff323b1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para el título */
+    border: 2px solid #ff6600; /* Borde naranja alrededor del texto */
+    padding: 10px;
+    display: inline-block;
+}
+
+header p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 2px solid #ff6600; /* Borde naranja alrededor del párrafo */
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 40px 10%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff6600;
+    border: 2px solid #ff6600; /* Borde naranja alrededor de los subtítulos */
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Estilo de la galería */
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de los personajes */
+.characters {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.character-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.character-card img {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.character-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    border: 2px solid #ff6600; /* Borde alrededor de los nombres de personajes */
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.character-card p {
+    font-size: 1rem;
+    color: #666;
+    border: 1px solid #ff6600; /* Borde alrededor de la descripción */
+    padding: 5px;
+}
+
+/* Formulario de contacto */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e65c00;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+/* Animación de aparición gradual */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-out;
+}
+
+button {
+    background-color: #3498db; /* Color de fondo inicial */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9; /* Color de fondo al hacer hover */
+    transform: scale(1.1); /* Aumenta el tamaño del botón */
+}
+
+.character-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character-card:hover {
+    transform: translateY(-10px); /* Desliza hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Añade sombra */
+}
+
+.gallery img {
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+}
+
+section:in-viewport h2 {
+    animation-play-state: running;
+}
+
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.character-card {
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.character-card {
+    animation: slideInFromLeft 0.6s ease-out forwards;
+}
